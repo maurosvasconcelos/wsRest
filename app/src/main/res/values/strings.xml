@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ICF-TESTE</string>
+    <string name="action_settings">Settings</string>
+    <string name="teste">teste</string>
+    <string name="title_activity_">Activity</string>
+    <string name="title_activity_cadastrar_pessoa">ICF-TESTE-CADASTRO</string>
+</resources>
