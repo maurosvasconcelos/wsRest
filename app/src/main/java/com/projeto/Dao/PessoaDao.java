@@ -123,8 +123,6 @@ public class PessoaDao {
 
             String responseBody = httpclient.execute(chamadaget, responseHandler);
 
-
-            // se quiParse
             JSONObject json = new JSONObject(responseBody);
             //Pessoa pes = new Pessoa();
             // pes.setNome(json.getString("pessoa"));
