@@ -173,7 +173,7 @@ public class PessoaDao {
             pessoaObj.put("celular", pessoa.getCelular());
             pessoaObj.put("fixo", pessoa.getFixo());
             pessoaObj.put("email", pessoa.getEmail());
-            pessoaObj.put("dtNacimento", pessoa.getDataNascimento());
+            pessoaObj.put("dataNascimento", pessoa.getDataNascimento());
 
             HttpPost post = new HttpPost(url);
 

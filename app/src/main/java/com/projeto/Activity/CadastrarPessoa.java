@@ -118,6 +118,7 @@ public class CadastrarPessoa extends AppCompatActivity implements GridView.OnCli
         try {
 
             final PessoaDao pessoaDao = new PessoaDao();
+
            // final String url = "http://192.168.1.5:8080/RestFulWS/pessoa/incluir";
             //final String url = "http://hcfsolutions.com.br:8080/RestFulWS/pessoa/incluir";
             //final String url =   "http://192.168.25.208:8080/RestFulWS/pessoa/incluir";
