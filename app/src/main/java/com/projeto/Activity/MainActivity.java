@@ -80,8 +80,13 @@ public class MainActivity extends AppCompatActivity implements GridView.OnClickL
 
             PessoaDao pessoaDao = new PessoaDao();
             //String url = "http://192.168.1.5:8080/RestFulWS/pessoa/listarTodos";
-            String url = "http://hcfsolutions.com.br:8080/RestFulWS/pessoa/consultarCpf" + cpf;
+            //String url = "http://hcfsolutions.com.br:8080/RestFulWS/pessoa/consultarCpf" + cpf;
             //  String url = "http://192.168.82.126:8080/RestFulWS/pessoa/consultarCpf" + cpf;
+            //web
+            //String url = "http://189.112.226.70:85/RestFulWS/pessoa/consultarCpf" + cpf;
+             //RES
+            String url = "http://192.168.1.5:8084/RestFulWS/pessoa/consultarCpf" + cpf;
+
 
             final String resultado = pessoaDao.ConectarWS(url);
             if (resultado.equals("1")) {

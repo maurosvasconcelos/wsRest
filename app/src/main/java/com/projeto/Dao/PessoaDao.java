@@ -167,9 +167,13 @@ public class PessoaDao {
 
             JSONObject pessoaObj = new JSONObject();
             //  pessoaObj.put("Pessoa", pessoa );
-            pessoaObj.put("codigo", pessoa.getCodigo());
+           // pessoaObj.put("codigo", pessoa.getCodigo());
             pessoaObj.put("nome", pessoa.getNome());
             pessoaObj.put("cpf", pessoa.getCpf());
+            pessoaObj.put("celular", pessoa.getCelular());
+            pessoaObj.put("fixo", pessoa.getFixo());
+            pessoaObj.put("email", pessoa.getEmail());
+            pessoaObj.put("dtNacimento", pessoa.getDataNascimento());
 
 
             HttpPost post = new HttpPost(url);
