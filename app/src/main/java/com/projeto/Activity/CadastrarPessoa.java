@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.mauro.wsrest.R;
 import com.projeto.Dao.PessoaDao;
 import com.projeto.Modal.Pessoa;
+import com.projeto.Util.Conexao;
 import com.projeto.Util.Data;
 import com.projeto.Util.Mask;
 
@@ -125,7 +126,9 @@ public class CadastrarPessoa extends AppCompatActivity implements GridView.OnCli
             //final String url = "http://189.112.226.70:85/RestFulWS/pessoa/incluir";
            // final String url = "http://192.168.25.208:8084/RestFulWS/pessoa/incluir";
             //RES
-            String url = "http://192.168.1.5:8084/RestFulWS/pessoa/incluir";
+            //String url = "http://192.168.1.5:8084/RestFulWS/pessoa/incluir";
+
+            String url = Conexao.IP_CASA_URL + Conexao.INCLUIR;
 
 
             String retorno =  pessoaDao.incluir(url ,pessoa);
