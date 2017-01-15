@@ -175,7 +175,6 @@ public class PessoaDao {
             pessoaObj.put("email", pessoa.getEmail());
             pessoaObj.put("dtNacimento", pessoa.getDataNascimento());
 
-
             HttpPost post = new HttpPost(url);
 
             StringEntity se = new StringEntity(pessoaObj.toString());
