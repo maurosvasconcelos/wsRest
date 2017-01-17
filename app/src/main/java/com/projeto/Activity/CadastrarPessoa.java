@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -19,7 +20,6 @@ import com.example.mauro.wsrest.R;
 import com.projeto.Dao.PessoaDao;
 import com.projeto.Modal.Pessoa;
 import com.projeto.Util.Conexao;
-import com.projeto.Util.Data;
 import com.projeto.Util.Mask;
 
 public class CadastrarPessoa extends AppCompatActivity implements GridView.OnClickListener, Runnable {
@@ -38,6 +38,8 @@ public class CadastrarPessoa extends AppCompatActivity implements GridView.OnCli
     private EditText editTextEmail;
     private EditText editTextCelular;
     private EditText editTextFixo;
+    private CheckBox checkBoxMasc;
+    private CheckBox checkBoxFem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,10 +53,14 @@ public class CadastrarPessoa extends AppCompatActivity implements GridView.OnCli
         editTextDtNascimento.addTextChangedListener(Mask.insert("##/##/####", editTextDtNascimento));
 
         editTextCelular = (EditText) findViewById(R.id.editTextCelular);
-        editTextCelular.addTextChangedListener(Mask.insert("(##)####-####", editTextCelular));
+        editTextCelular.addTextChangedListener(Mask.insert("(##)#####-####", editTextCelular));
 
         editTextFixo = (EditText) findViewById(R.id.editTextFixo);
         editTextFixo.addTextChangedListener(Mask.insert("(##)####-####", editTextFixo));
+
+        checkBoxMasc = (CheckBox) findViewById(R.id.checkBoxM);
+        checkBoxFem = (CheckBox) findViewById(R.id.checkBoxF);
+
 
         btnSalvar = (Button) findViewById(R.id.btnSalvar);
         btnSalvar.setOnClickListener(this);
@@ -97,7 +103,7 @@ public class CadastrarPessoa extends AppCompatActivity implements GridView.OnCli
         pessoa.setCpf(cpf);
         pessoa.setNome(editTextNome.getText().toString());
        // pessoa.setCodigo(Long.parseLong(editTextId.getText().toString()));
-        pessoa.setDataNascimento(Data.convertToDate(editTextDtNascimento.getText().toString()));
+        pessoa.setDataNascimento(editTextDtNascimento.getText().toString());
         pessoa.setCelular(celular);
         pessoa.setFixo(fixo);
         pessoa.setEmail(editTextEmail.getText().toString());

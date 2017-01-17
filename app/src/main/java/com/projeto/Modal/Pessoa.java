@@ -13,10 +13,11 @@ public class Pessoa {
     private String horaCadastro;
     private Date dataCadastro;
 
-    private Date dataNascimento;
+    private String dataNascimento;
     private String email;
     private String celular;
     private String fixo;
+    private String sexo;
 
     public Long getCodigo() {
         return codigo;
@@ -58,11 +59,11 @@ public class Pessoa {
         this.horaCadastro = horaCadastro;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -90,9 +91,17 @@ public class Pessoa {
         this.fixo = fixo;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
     public String validarPessoa(Pessoa pessoa) {
         String msg = "";
-       
+
         if (pessoa.getNome() == null || pessoa.getNome().isEmpty()) {
             msg += "Informe o NOME" + "\n";
         }
