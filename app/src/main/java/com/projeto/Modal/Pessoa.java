@@ -112,7 +112,7 @@ public class Pessoa {
             msg += "Informe a Data Nascimento" + "\n";;
         }
         if (pessoa.getSexo() == null || pessoa.getSexo().isEmpty()) {
-            msg += "Informe a Data Nascimento" + "\n";;
+            msg += "Informe o Sexo" + "\n";;
         }
         if (pessoa.getCelular() == null || pessoa.getCelular().isEmpty()) {
             msg += "Informe o Celular";
