@@ -106,10 +106,13 @@ public class Pessoa {
             msg += "Informe o NOME" + "\n";
         }
         if (pessoa.getCpf() == null || pessoa.getCpf().isEmpty()) {
-            msg += "Informe o CPF";
+            msg += "Informe o CPF" + "\n";;
         }
-        if (pessoa.getDataNascimento() == null) {
-            msg += "Informe a Data Nascimento";
+        if (pessoa.getDataNascimento() == null || pessoa.getDataNascimento().isEmpty()) {
+            msg += "Informe a Data Nascimento" + "\n";;
+        }
+        if (pessoa.getSexo() == null || pessoa.getSexo().isEmpty()) {
+            msg += "Informe a Data Nascimento" + "\n";;
         }
         if (pessoa.getCelular() == null || pessoa.getCelular().isEmpty()) {
             msg += "Informe o Celular";
