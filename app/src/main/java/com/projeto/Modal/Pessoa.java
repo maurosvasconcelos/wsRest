@@ -103,10 +103,10 @@ public class Pessoa {
         String msg = "";
 
         if (pessoa.getNome() == null || pessoa.getNome().isEmpty()) {
-            msg += "Informe o NOME" + "\n";
+            msg += "Informe o Nome" + "\n";
         }
         if (pessoa.getCpf() == null || pessoa.getCpf().isEmpty()) {
-            msg += "Informe o CPF" + "\n";;
+            msg += "Informe o Cpf" + "\n";;
         }
         if (pessoa.getDataNascimento() == null || pessoa.getDataNascimento().isEmpty()) {
             msg += "Informe a Data Nascimento" + "\n";;
